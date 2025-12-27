@@ -1,0 +1,187 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭╴](fg:arrow)\
+$directory\
+$git_branch\
+$git_status\
+$aws\
+$fill\
+$cmd_duration\
+$time\
+(\
+    via \
+    $nodejs\
+    $python\
+    $rust\
+    $java\
+    $c\
+)
+[╰─](fg:arrow)$character\
+"""
+
+add_newline = true
+palette = 'tokyo_night'  # 'meowrch', 'dracula', 'tokyo_night', 'nord' から選択
+
+[directory]
+style = "fg:directory bold"
+format = "at [$path]($style)[$read_only]($read_only_style) "
+truncation_length = 2
+truncation_symbol = "…/"
+truncate_to_repo = true
+read_only = "  "
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bold fg:git"
+format = 'via [$symbol$branch]($style) '
+
+[git_status]
+style = "fg:git_status"
+format = '[$all_status$ahead_behind]($style) '
+
+[aws]
+symbol = "󰸏 "
+style = "fg:aws bold"
+format = '[$symbol$profile]($style) '
+disabled = false
+
+[fill]
+symbol = " "
+
+[time]
+disabled = false
+time_format = "%H:%M"
+style = "bold fg:time"
+format = '[󱑈 $time]($style) '
+
+[character]
+disabled = false
+success_symbol = '[󰍟](fg:arrow)'
+error_symbol = '[󰍟](fg:red)'
+vimcmd_symbol = '[❮](bold fg:arrow)'
+vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
+vimcmd_replace_symbol = '[❮](bold fg:lavender)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+[cmd_duration]
+disabled = false
+format = "took [ $duration]($style) "
+style = "bold fg:duration"
+min_time = 500
+show_notifications = true
+min_time_to_notify = 45000
+
+[nodejs]
+format = "[ $symbol$version ]($style)"
+style = "bg:node fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[python]
+disabled = false
+format = '[ ${symbol}${pyenv_prefix}(${version})( \($virtualenv\)) ]($style)'
+symbol = " "
+version_format = "${raw}"
+style = "bg:python fg:text_light"
+
+[rust]
+format = "[ $symbol$version ]($style)"
+style = "bg:rust fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[java]
+format = "[ $symbol$version ]($style)"
+style = "bg:java fg:text_light"
+version_format = "${raw}"
+symbol = " "
+disabled = false
+
+[c]
+format = "[ $symbol($version(-$name)) ]($style)"
+style = "bg:clang fg:text_light"
+symbol = " "
+version_format = "${raw}"
+disabled = false
+
+[palettes.meowrch]
+arrow = "#B3BCFD"
+directory = "#B3BCFD"
+time = "#B3BCFD"
+node = "#a5e6ba"
+git = "#f17f29"
+git_status = "#DFEBED"
+python = "#edf67d"
+java = "#F86279"
+rust = "#ffdac6"
+clang = "#caf0f8"
+duration = "#ce4257"
+text_light = "#26272A"
+aws = "#f9e2af"
+lavender = "#b4befe"
+yellow = "#f9e2af"
+red = "#f38ba8"
+
+[palettes.dracula]
+arrow = "#bd93f9"
+directory = "#8be9fd"
+time = "#bd93f9"
+node = "#50fa7b"
+git = "#ffb86c"
+git_status = "#f8f8f2"
+python = "#f1fa8c"
+java = "#ff5555"
+rust = "#ffb86c"
+clang = "#8be9fd"
+duration = "#ff79c6"
+text_light = "#282a36"
+aws = "#f1fa8c"
+lavender = "#bd93f9"
+yellow = "#f1fa8c"
+red = "#ff5555"
+
+[palettes.tokyo_night]
+arrow = "#bb9af7"
+directory = "#7aa2f7"
+time = "#bb9af7"
+node = "#9ece6a"
+git = "#ff9e64"
+git_status = "#c0caf5"
+python = "#e0af68"
+java = "#f7768e"
+rust = "#ff9e64"
+clang = "#7dcfff"
+duration = "#f7768e"
+text_light = "#1a1b26"
+aws = "#e0af68"
+lavender = "#bb9af7"
+yellow = "#e0af68"
+red = "#f7768e"
+
+[palettes.nord]
+arrow = "#81a1c1"
+directory = "#88c0d0"
+time = "#81a1c1"
+node = "#a3be8c"
+git = "#d08770"
+git_status = "#eceff4"
+python = "#ebcb8b"
+java = "#bf616a"
+rust = "#d08770"
+clang = "#8fbcbb"
+duration = "#b48ead"
+text_light = "#2e3440"
+aws = "#ebcb8b"
+lavender = "#b48ead"
+yellow = "#ebcb8b"
+red = "#bf616a"
