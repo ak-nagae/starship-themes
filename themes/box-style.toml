@@ -44,7 +44,7 @@ format = '[ $user]($style)'
 
 [directory]
 style = "fg:peach bold"
-format = "[ $path ]($style) "
+format = "[$path ]($style) "
 truncation_length = 1
 truncation_symbol = "…/"
 
@@ -58,7 +58,7 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "fg:yellow bold"
-format = '[ $symbol$branch ]($style) '
+format = '[$symbol$branch ]($style) '
 
 [git_status]
 style = "fg:yellow bold"
@@ -107,7 +107,7 @@ format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 [aws]
 symbol = "󰸏 "
 style = "fg:green bold"
-format = '[ $symbol$profile ]($style) '
+format = '[$symbol$profile ]($style) '
 disabled = false
 
 [docker_context]
@@ -125,7 +125,7 @@ ignore_base = false
 disabled = false
 time_format = "%R"
 style = "fg:lavender bold"
-format = '[ $time ]($style) '
+format = '[$time ]($style) '
 
 [line_break]
 disabled = true
