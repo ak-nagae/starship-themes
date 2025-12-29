@@ -6,7 +6,6 @@ $directory\
 $git_branch\
 $git_status\
 $aws\
-$fill\
 $cmd_duration\
 $time\
 (\
@@ -39,7 +38,7 @@ read_only = "  "
 "Developer" = "󰲋 "
 
 [git_branch]
-symbol = ""
+symbol = " "
 style = "bold fg:git"
 format = 'via [$symbol$branch]($style) '
 
@@ -52,9 +51,6 @@ symbol = "󰸏 "
 style = "fg:aws bold"
 format = '[$symbol$profile]($style) '
 disabled = false
-
-[fill]
-symbol = " "
 
 [time]
 disabled = false
