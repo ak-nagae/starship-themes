@@ -40,7 +40,7 @@ read_only = "  "
 [git_branch]
 symbol = " "
 style = "bold fg:git"
-format = 'via [$symbol$branch]($style) '
+format = 'via [$symbol$branch]($style)'
 
 [git_status]
 style = "fg:git_status"
