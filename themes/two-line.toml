@@ -19,6 +19,9 @@ $time\
 [╰─](fg:arrow)$character\
 """
 
+# 右側のプロンプトを明示的に無効化
+right_format = ""
+
 add_newline = true
 palette = 'tokyo_night'  # 'meowrch', 'dracula', 'tokyo_night', 'nord' から選択
 
